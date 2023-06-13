@@ -1,8 +1,14 @@
-const ErrorHandler = require("../utils/errorHandler")
-const catchAsyncError = require("../middleware/catchAsyncErrors");
-const User = require("../models/userModel");
-const sendToken = require("../utils/jwtToken");
-const sendEmail = require("../utils/sendEmail");
+// const ErrorHandler = require("../utils/errorHandler")
+// const catchAsyncError = require("../middleware/catchAsyncErrors");
+// const User = require("../models/userModel");
+// const sendToken = require("../utils/jwtToken");
+// const sendEmail = require("../utils/sendEmail");
+
+const ErrorHandler = require("./errorHandler")
+const catchAsyncError = require("./catchAsyncErrors");
+const User = require("./userModel");
+const sendToken = require("./jwtToken");
+const sendEmail = require("./sendEmail");
 const crypto  = require("crypto");
 const cloudinary = require("cloudinary");
 

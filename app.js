@@ -3,7 +3,8 @@ const app = express();
 const cookieParser = require("cookie-parser");
 const bodyParser = require("body-parser");
 const fileUpload = require("express-fileupload");
-const errorMiddleware = require("../backend/middleware/error");
+// const errorMiddleware = require("../backend/middleware/error");
+const errorMiddleware = require("error");
 const dotenv = require("dotenv");
 
 dotenv.config({path : "backend/config/config.env"});
@@ -15,7 +16,7 @@ app.use(fileUpload());
 
 const product = require("../backend/routes/productRoute");
 const user = require("../backend/routes/userRoute");
-const order = require("../backend/routes/orderRoutes");
+const order = require("./orderRoutes");
 const payment = require("../backend/routes/paymentRoute");
 
 app.use("/api/v1", product);
