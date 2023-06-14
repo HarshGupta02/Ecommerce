@@ -22,7 +22,7 @@ cloudinary.config({
 })
 
 const server = app.listen(process.env.PORT, () => {
-    console.log(`Server is Working on http://localhost:${process.env.PORT}`)
+    console.log(`Server is Working on ${process.env.PORT}`)
 });
 
 process.on("unhandledRejection", (err) => {
