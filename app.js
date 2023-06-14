@@ -6,7 +6,6 @@ const fileUpload = require("express-fileupload");
 const errorMiddleware = require("./error.js");
 const dotenv = require("dotenv");
 const path = require("path");
-const BASE_URL = process.env.BASE_URL;
 
 dotenv.config({path : "./config.env"});
 
@@ -20,15 +19,15 @@ const user = require("./userRoute.js");
 const order = require("./orderRoutes.js");
 const payment = require("./paymentRoute.js");
 
-app.use(`${BASE_URL}/api/v1`, product);
-app.use(`${BASE_URL}/api/v1`, user);
-app.use(`${BASE_URL}/api/v1`, order);
-app.use(`${BASE_URL}/api/v1`, payment);
+app.use(`${process.env.BASE_URL}/api/v1`, product);
+app.use(`${process.env.BASE_URL}/api/v1`, user);
+app.use(`${process.env.BASE_URL}/api/v1`, order);
+app.use(`${process.env.BASE_URL}/api/v1`, payment);
 
 app.use(express.static(path.join(__dirname, "../frontend/build")));
 
 app.get("*", (req, res) => {
-    res.sendFile(path.resolve(__dirname, '../frontend', 'build', 'index.html'));
+    res.sendFile(path.resolve(__dirname, '../frontend/build/index.html'));
 })
 
 app.use(errorMiddleware);
