@@ -4,11 +4,11 @@
 // const sendToken = require("../utils/jwtToken");
 // const sendEmail = require("../utils/sendEmail");
 
-const ErrorHandler = require("./errorHandler")
-const catchAsyncError = require("./catchAsyncErrors");
-const User = require("./userModel");
-const sendToken = require("./jwtToken");
-const sendEmail = require("./sendEmail");
+const ErrorHandler = require("./errorHandler.js")
+const catchAsyncError = require("./catchAsyncErrors.js");
+const User = require("./userModel.js");
+const sendToken = require("./jwtToken.js");
+const sendEmail = require("./sendEmail.js");
 const crypto  = require("crypto");
 const cloudinary = require("cloudinary");
 

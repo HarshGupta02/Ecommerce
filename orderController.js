@@ -3,10 +3,10 @@
 // const ErrorHandler = require("../utils/errorHandler")
 // const catchAsyncError = require("../middleware/catchAsyncErrors");
 
-const Order = require("./orderModel");
-const Product = require("./productModel");
-const ErrorHandler = require("./errorHandler");
-const catchAsyncError = require("./catchAsyncErrors");
+const Order = require("./orderModel.js");
+const Product = require("./productModel.js");
+const ErrorHandler = require("./errorHandler.js");
+const catchAsyncError = require("./catchAsyncErrors.js");
 
 exports.newOrder = catchAsyncError(async (req, res, next) => {
     const {shippingInfo, orderItems, paymentInfo, itemsPrice, taxPrice, shippingPrice, totalPrice} = req.body;

@@ -3,10 +3,10 @@
 // const catchAsyncError = require("../middleware/catchAsyncErrors");
 // const ApiFeatures = require("../utils/apifeatures");
 
-const Product = require("./productModel")
-const ErrorHandler = require("./errorHandler")
-const catchAsyncError = require("./catchAsyncErrors");
-const ApiFeatures = require("./apifeatures");
+const Product = require("./productModel.js")
+const ErrorHandler = require("./errorHandler.js")
+const catchAsyncError = require("./catchAsyncErrors.js");
+const ApiFeatures = require("./apifeatures.js");
 
 const cloudinary = require("cloudinary");
 
